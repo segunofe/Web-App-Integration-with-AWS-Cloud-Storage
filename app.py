@@ -3,6 +3,11 @@ import boto3
 from botocore.exceptions import NoCredentialsError
 import os
 
+from dotenv import load_dotenv  # Import the load_dotenv function
+
+# Load environment variables from the .env file
+load_dotenv()
+
 app = Flask(__name__)
 
  # S3 Configuration
