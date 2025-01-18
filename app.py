@@ -6,10 +6,10 @@ import os
 app = Flask(__name__)
 
  # S3 Configuration
-ACKEY = ''
-SECKEY = ''
-S3_BUCKET_NAME = ''
 
+ACKEY = os.getenv('AWS_ACCESS_KEY_ID')
+SECKEY = os.getenv('AWS_SECRET_ACCESS_KEY')
+S3_BUCKET_NAME = os.getenv('S3_BUCKET_NAME')  # Store S3_BUCKET_NAME in GitHub secrets if needed
 
 # Initialize the S3 client
 s3_client = boto3.client(
