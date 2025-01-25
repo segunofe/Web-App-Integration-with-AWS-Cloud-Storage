@@ -9,6 +9,7 @@ COPY . /app
 
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install Flask==2.1.2 werkzeug==2.0.3
 
 # Expose the port the app runs on
 EXPOSE 5000
